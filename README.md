@@ -1,12 +1,12 @@
-#From Spreadsheets to Smart Graphs: Visualizing Application-Infra Dependencies Using Databricks and Neptune DB
-##Introduction
+# From Spreadsheets to Smart Graphs: Visualizing Application-Infra Dependencies Using Databricks and Neptune DB
+## Introduction
 
 In today’s cloud-native environments, applications are no longer isolated entities—they are interconnected with various infrastructure components, particularly across cloud services like AWS. Understanding these dependencies is crucial for reducing downtime, improving observability, and enhancing root cause analysis during incidents.
 To address this, we used data visualization to identify key relationships and gain clearer insights into the problem.
 
 This post walks through how we achieved that, the tools we used, the challenges we faced, and the value it brought to our operations.
 
-##Technology Stack Used
+## Technology Stack Used
 CMDB Source: Excel Sheet
 
 Storage & Processing: Databricks
@@ -17,7 +17,7 @@ Graph Database: Amazon Neptune
 
 Visualization & Scripting: Plotly, Python
 
-##Steps
+## Steps
 Data Extraction
 
 The initial CMDB data was maintained in an Excel spreadsheet, listing applications, associated AWS services, and hierarchical dependencies.
@@ -61,19 +61,19 @@ Use Case in Action
 During an infrastructure outage (e.g., RDS issue), querying the graph immediately shows the blast radius—what apps are affected and their downstream dependencies.
 
 
-##Benefits / Problem Solved
+## Benefits / Problem Solved
 Improved Incident Response: Quickly identify affected applications during infrastructure issues.
 
 Automated Impact Analysis: Know the downstream ripple effect of a failing AWS component.
 
 Better Communication: Graph visuals help business and tech teams align during incidents.
 
-##Challenges Faced
+## Challenges Faced
 Data Standardization: Excel rows were not always consistent in formatting.
 
 Learning Curve: Neptune and Gremlin syntax required an initial ramp-up for the team.
 
-##Future Potential Enhancements
+## Future Potential Enhancements
 Real-Time Updates: Connect to AWS Config or CloudWatch for dynamic updates.
 
 Alert Integrations: Trigger alerts based on dependency graph analysis.
@@ -82,6 +82,6 @@ Self-Healing Paths: Use ML to recommend fallback services or auto-scaling soluti
 
 Interactive UI: Build a web dashboard with drag-and-drop, drill-down capabilities.
 
-##Conclusion
+## Conclusion
 
 The transformation from a traditional CMDB to a smart dependency graph has empowered our engineering teams with real-time insights into application-infrastructure relationships. This setup not only streamlines our incident response but also lays the groundwork for future automation and resilience strategies. Graph databases like Amazon Neptune, combined with Databricks' processing power, offer a modern solution for infrastructure observability and management.
